@@ -9,8 +9,7 @@ model = pickle.load(open('models/iris_classifier_knn_model.sav', 'rb'))
 
 @app.route('/')
 def home():
-    result = ''
-    return jsonify(result=result)
+    return "Use /iris-predict endpoint to predict the species of Iris flower."
 
 @app.route('/iris-predict', methods=['POST'])
 def predict():
